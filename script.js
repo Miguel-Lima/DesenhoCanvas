@@ -29,14 +29,14 @@ function colorClickEvent(e) {
     document.querySelector('.color.active').classList.remove('active');
     e.target.classList.add('active');
 }
-function mouseDownEvent() {
+function mouseDownEvent(e) {
     canDraw = true;
     mouseX = e.pageX - screen.offsetLeft;
     mouseY = e.pageY - screen.offsetTop;
 }
 function mouseMoveEvent(e) {
     if(canDraw) {
-        canDraw(e.pageX, e.pageY);
+        draw(e.pageX, e.pageY);
     }
 }
 function mouseUpEvent() {
